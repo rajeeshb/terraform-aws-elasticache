@@ -31,8 +31,8 @@ resource "aws_security_group" "redis" {
 }
 
 resource "aws_elasticache_replication_group" "redis_replication_group" {
-  replication_group_id          = "${var.project}-${var.environment}-rep-group-1"
-  replication_group_description = "test description"
+  replication_group_id          = "${var.project}-${var.environment}-rg"
+  replication_group_description = "${var.project} ${var.environment} replication group"
   node_type                     = "${var.node_type}"
   number_cache_clusters         = "${var.number_cache_clusters}"
   port                          = "${var.port}"
