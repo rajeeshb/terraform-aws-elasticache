@@ -2,17 +2,16 @@
  * Required Variables.
  */
 
-variable "aws" {
-  type        = "map"
-  description = "AWS account informations."
-}
-
 variable "project" {
   description = "Name of project."
 }
 
 variable "environment" {
   description = "Name of environment (i.e. dev, test, prod)."
+}
+
+variable "vpc_id" {
+  description = "VPC id."
 }
 
 variable "subnet_ids" {
