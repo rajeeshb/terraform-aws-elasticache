@@ -7,7 +7,7 @@ terraform {
  */
 
 resource "aws_security_group" "redis" {
-  vpc_id = "${var.aws["vpc_id"]}"
+  vpc_id = "${var.vpc_id}"
 
   ingress {
     from_port   = "${var.port}"
