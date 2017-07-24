@@ -31,7 +31,7 @@ resource "aws_security_group" "redis" {
 }
 
 resource "aws_elasticache_replication_group" "redis_replication_group" {
-  replication_group_id          = "${var.project}-${var.environment}${var.replication_group_id_suffix}"
+  replication_group_id          = "${join("",slice(split("",join("-",list(var.project,var.environment))),0,17))}-rg"
   replication_group_description = "${var.project} ${var.environment} replication group"
   node_type                     = "${var.node_type}"
   number_cache_clusters         = "${var.number_cache_clusters}"
