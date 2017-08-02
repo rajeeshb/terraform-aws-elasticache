@@ -28,11 +28,10 @@ variable "availability_zones" {
  * Optional Variables.
  */
 
-variable "replication_group_id_suffix" {
-  description = "Suffix for the replication_group_id value."
-  default = "-rg"
+variable "replication_group_id_suffix" { 
+  description = "Suffix for the replication_group_id value." 
+  default = "rg" 
 }
-
 
 variable "number_cache_clusters" {
   description = "The number of cache clusters this replication group will have. If Multi-AZ is enabled , the value of this parameter must be at least 2. Changing this number will force a new resource"
