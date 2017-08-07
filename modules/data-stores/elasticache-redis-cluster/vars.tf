@@ -55,8 +55,8 @@ variable "parameter_group_name" {
 }
 
 variable "node_type" {
-  description = "The compute and memory capacity of the nodes in the node group."
-  default     = "cache.m3.medium"
+  description = "The compute and memory capacity of the nodes in the node group. See https://aws.amazon.com/elasticache/pricing/ for the list of available node types."
+  default     = "cache.t2.micro"
 }
 
 variable "automatic_failover_enabled" {
