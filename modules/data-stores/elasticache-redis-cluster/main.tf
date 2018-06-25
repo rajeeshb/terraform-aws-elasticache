@@ -37,6 +37,7 @@ resource "aws_elasticache_replication_group" "redis_replication_group" {
   node_type                     = "${var.node_type}"
   number_cache_clusters         = "${var.number_cache_clusters}"
   port                          = "${var.port}"
+  engine_version                = "${var.engine_version}"
   parameter_group_name          = "${var.parameter_group_name}"
   availability_zones            = ["${var.availability_zones}"]
   automatic_failover_enabled    = "${var.automatic_failover_enabled}"
