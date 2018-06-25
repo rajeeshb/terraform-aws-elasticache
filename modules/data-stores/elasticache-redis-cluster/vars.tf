@@ -1,4 +1,3 @@
-
 /**
  * Required Variables.
  */
@@ -29,9 +28,9 @@ variable "availability_zones" {
  * Optional Variables.
  */
 
-variable "replication_group_id_suffix" { 
-  description = "Suffix for the replication_group_id value." 
-  default = "rg" 
+variable "replication_group_id_suffix" {
+  description = "Suffix for the replication_group_id value."
+  default     = "rg"
 }
 
 variable "number_cache_clusters" {
@@ -49,6 +48,11 @@ variable "engine_version" {
   default     = "3.2.4"
 }
 
+variable "auto_minor_version_upgrade" {
+  description = "Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window"
+  default     = true
+}
+
 variable "parameter_group_name" {
   description = "The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used."
   default     = "default.redis3.2.cluster.on"
@@ -61,7 +65,7 @@ variable "node_type" {
 
 variable "automatic_failover_enabled" {
   description = "Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails."
-  default = true
+  default     = true
 }
 
 variable "maintenance_window" {
